@@ -4,7 +4,7 @@ export default () => (
     <header>
         <ul>
             <li>
-                <a href="/">Movies</a>
+                <a href="/">Movie</a>
             </li>
             <li>
                 <a href="/tv">TV</a>
