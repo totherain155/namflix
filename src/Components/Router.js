@@ -8,9 +8,12 @@ import TV from "Routes/TV"
 export default () => (
     <Router>
         <Switch>
+
             <Route path="/" exact component={Home} />
+            <Route path="/tv" exact component={TV} />
             <Route path="/search" component={Search} />
-            <Route path="/tv" component={TV} />
+            <Redirect from="*" to="/" />
+
         </Switch>
     </Router>
 )
