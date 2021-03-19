@@ -25,8 +25,8 @@ const Item = styled.li`
 width: 80px;
 height: 50px;
 text-align: center;
-border-bottom: 3px solid ${props => props.current ? "#74b9ff" : "transparent"};
- transition:border-bottom 0.5s ease-in-out    
+border-bottom : 3px solid ${props => props.current ? "#0984e3" : "transparent"};
+transition: border-bottom 0.5s ease-in-out;
 
 `;
 
@@ -37,19 +37,19 @@ align-items: center;
 justify-content: center;
 `;
 
-export default withRouter (({location: { pathname}}) => (
+export default withRouter(({location: {pathname}}) => (
     <Header>
-        
+       
         <List>
-            <Item current={pathname === "/"}>
+            <Item current={pathname == "/"}>
                 <SLink to="/">Movie</SLink>
             </Item>
-            <Item current={pathname === "/tv"}>
+            <Item current={pathname == "/tv"}>
                 <SLink to="/tv">TV</SLink>
             </Item>
-            <Item current={pathname === "/search"}>
+            <Item current={pathname == "/search"}>
                 <SLink to="/search">Search</SLink>
             </Item>
         </List>
     </Header>
-))  
+))
