@@ -20,4 +20,3 @@ App.
 - [x] TV Show Detail
 - [x] Movie Detail
 - [x] Search (Movie, TV)
--
