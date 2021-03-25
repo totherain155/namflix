@@ -11,11 +11,12 @@ export default class extends React.Component {
         isLoading : true
 
     }
-    
+
     render() {
         
         const {nowPlaying, upcoming, popular, error, isLoading} = this.state;
-        
+        // object destructuring 사용 
+
         return(
             <HomePresenter 
               nowPlaying = {nowPlaying}
