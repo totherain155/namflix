@@ -31,7 +31,7 @@ export default class extends React.Component {
       });
     } catch {
       this.setState({
-        error: "can't find your movies",
+        error: "can't find your movie information",
       });
     } finally {
       this.setState({
