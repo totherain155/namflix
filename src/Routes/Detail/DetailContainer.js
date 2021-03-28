@@ -12,8 +12,6 @@ export default class extends React.Component {
     const { result, error, Loading } = this.state;
     // object destructuring 사용
 
-    return (
-      <DetailPresenter result={result} error={error} isLoading={isLoading} />
-    );
+    return <DetailPresenter result={result} error={error} Loading={Loading} />;
   }
 }
