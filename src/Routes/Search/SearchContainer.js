@@ -6,7 +6,7 @@ export default class extends React.Component {
   state = {
     movieResults: null,
     tvResults: null,
-    searchTerm: "code",
+    searchTerm: "",
     loading: false,
     error: null,
   };
@@ -18,26 +18,34 @@ export default class extends React.Component {
     }
   };
 
-  componentDidMount() {
-    this.handleSubmit(searchTerm);
-  }
-
   searchByTerm = async () => {
     const { searchTerm } = this.state;
     this.setState({ loading: true });
     try {
-      const movieResults = await moviesApi.search(searchTerm);
-      const tvResults = await tvApi.search(searchTerm);
-      console.log(movieResults, tvResults);
+      const {
+        data: { results: movieResults },
+      } = await moviesApi.search(searchTerm);
+      const {
+        data: { results: tvResults },
+      } = await tvApi.search(searchTerm);
+      this.setState({
+        movieResults,
+        tvResults,
+      });
     } catch {
-      this.setState({ error: "Can't find results" });
+      this.setState({
+        error: "can't find your results",
+      });
     } finally {
-      this.setState({ loading: false });
+      this.setState({
+        loading: false,
+      });
     }
   };
 
   render() {
     const { movieResults, tvResults, searchTerm, loading, error } = this.state;
+
     return (
       <SearchPresenter
         movieResults={movieResults}
@@ -45,6 +53,7 @@ export default class extends React.Component {
         searchTerm={searchTerm}
         loading={loading}
         error={error}
+        handleSubmit={this.handleSubmit}
       />
     );
   }
