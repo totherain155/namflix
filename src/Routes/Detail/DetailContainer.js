@@ -7,8 +7,17 @@ export default class extends React.Component {
     error: null,
     Loading: true,
   };
+  async componentDidMount() {
+    const {
+      match: {
+        params: { id },
+      },
+    } = this.props;
+    console.log(id);
+  }
 
   render() {
+    console.log(this.props);
     const { result, error, Loading } = this.state;
     // object destructuring 사용
 
