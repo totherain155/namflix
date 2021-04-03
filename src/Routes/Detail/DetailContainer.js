@@ -12,12 +12,15 @@ export default class extends React.Component {
       match: {
         params: { id },
       },
+      history: { push },
     } = this.props;
-    console.log(id);
+    const parsedId = parseInt(id);
+    if (isNaN(parsedId)) {
+      return push("/");
+    }
   }
 
   render() {
-    console.log(this.props);
     const { result, error, Loading } = this.state;
     // object destructuring 사용
 
