@@ -13,7 +13,6 @@ export default class extends React.Component {
       match: {
         params: { id },
       },
-
       history: { push },
     } = this.props;
     console.log(id);
@@ -22,6 +21,7 @@ export default class extends React.Component {
       return push("/");
     }
   }
+
   render() {
     const { result, error, Loading } = this.state;
     // object destructuring 사용
