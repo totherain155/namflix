@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-
 import Section from "Components/Section";
 
 const Container = styled.div`
@@ -16,14 +15,14 @@ const HomePresenter = ({ nowPlaying, popular, upcoming, loading, error }) =>
           {nowPlaying.map((movie) => movie.title)}
         </Section>
       )}
-      {upcoming && upcoming.length > 0 && (
-        <Section title="upcoming Movies">
-          {upcoming.map((movie) => movie.title)}
-        </Section>
-      )}
       {popular && popular.length > 0 && (
         <Section title="Popular Movies">
           {popular.map((movie) => movie.title)}
+        </Section>
+      )}
+      {upcoming && upcoming.length > 0 && (
+        <Section title="upcoming Movies">
+          {upcoming.map((movie) => movie.title)}
         </Section>
       )}
     </Container>
