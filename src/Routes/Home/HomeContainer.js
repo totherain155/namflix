@@ -13,7 +13,9 @@ export default class extends React.Component {
 
   async componentDidMount() {
     try {
-      const result = await moviesApi.nowPlaying();
+      const {
+        data: { results: nowPlaying },
+      } = await moviesApi.nowPlaying();
       console.log(result);
 
       const {
@@ -24,7 +26,7 @@ export default class extends React.Component {
       } = await moviesApi.popular();
 
       this.setState({
-        //nowPlaying,
+        nowPlaying,
         upcoming,
         popular,
       });
