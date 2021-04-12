@@ -1,17 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
-
-const Container = styled.div``;
+import styled from "styled-components";
 
 const Title = styled.span``;
 
 const Grid = styled.div``;
 
 const Section = ({ title, children }) => (
-  <container>
+  <Container>
     <Title>{title}</Title>
     <Grid>{children}</Grid>
-  </container>
+  </Container>
 );
 
 Section.propTypes = {
@@ -19,7 +18,7 @@ Section.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
-  ]),
-};
+}
+
 
 export default Section;
