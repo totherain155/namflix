@@ -16,6 +16,7 @@ export default class extends React.Component {
       const {
         data: { results: topRated },
       } = await tvApi.topRated();
+      console.log(topRated);
       const {
         data: { results: popular },
       } = await tvApi.popular();
