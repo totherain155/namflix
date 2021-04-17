@@ -18,14 +18,14 @@ const TVPresenter = ({ topRated, popular, airingToday, error, loading }) =>
           {topRated.map((show) => show.name)}
         </Section>
       )}
-      {popular && popular.length > 0 && (
-        <Section title="Popular Shows">
-          {popular.map((show) => show.name)}
-        </Section>
-      )}
       {airingToday && airingToday.length > 0 && (
         <Section title="Airing Today Shows">
           {airingToday.map((show) => show.name)}
+        </Section>
+      )}
+      {popular && popular.length > 0 && (
+        <Section title="Popular Shows">
+          {popular.map((show) => show.name)}
         </Section>
       )}
     </Container>
