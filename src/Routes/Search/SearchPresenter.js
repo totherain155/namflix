@@ -17,7 +17,9 @@ const SearchPresenter = ({
   error,
 }) => (
   <Container>
-    <Form onbSubmit={handleSubmit}></Form>
+    <Form onbSubmit={handleSubmit}>
+      <Input placeholder="Search Movies or TV Shows" value={searchTerm}></Input>
+    </Form>
   </Container>
 );
 
