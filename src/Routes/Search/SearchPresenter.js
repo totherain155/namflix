@@ -15,7 +15,11 @@ const SearchPresenter = ({
   searchTerm,
   handleSubmit,
   error,
-}) => null;
+}) => (
+  <Container>
+    <Form onbSubmit={handleSubmit}></Form>
+  </Container>
+);
 
 SearchPresenter.propTypes = {
   movieResults: PropTypes.array,
