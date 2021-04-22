@@ -11,7 +11,12 @@ export default class extends React.Component {
     error: null,
   };
 
-  updateTerm = () => {};
+  updateTerm = (event) => {
+    const {
+      target: { value },
+    } = event;
+    console.log(value);
+  };
 
   handleSubmit = (event) => {
     event.preventDefault();
