@@ -15,7 +15,6 @@ export default class extends React.Component {
     const {
       target: { value },
     } = event;
-    console.log(value);
   };
 
   handleSubmit = (event) => {
