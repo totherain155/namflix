@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import Loader from "Components/Loader";
+import Section from "Components/Section";
 
 const Container = styled.div`
   padding: 0px 20px;
@@ -34,6 +36,7 @@ const SearchPresenter = ({
         onChange={updateTerm}
       />
     </Form>
+    {loading ? <Loader /> : <Section></Section>}
   </Container>
 );
 
