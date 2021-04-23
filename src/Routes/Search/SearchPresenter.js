@@ -36,14 +36,20 @@ const SearchPresenter = ({
         onChange={updateTerm}
       />
     </Form>
-    {loading ? <Loader /> : (
-    <> 
-    {movieResults && movieResults.length > 0 && 
-    <Section title="Movie Results">{movieResults.map(movie => <span key={movie.id}>{movie.title}</span>)}</Section> )}
-    </>
-    
+    {loading ? (
+      <Loader />
+    ) : (
+      <>
+        {movieResults && movieResults.length > 0 && (
+          <Section title="Movie Results">
+            {movieResults.map((movie) => (
+              <span key={movie.id}>{movie.title}</span>
+            ))}
+          </Section>
+        )}
+      </>
+    )}
   </Container>
-
 );
 
 SearchPresenter.propTypes = {
