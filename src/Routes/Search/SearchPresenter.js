@@ -47,6 +47,13 @@ const SearchPresenter = ({
             ))}
           </Section>
         )}
+        {tvResults && tvResults.length > 0 && (
+          <Section title="TV Results">
+            {tvResults.map((show) => (
+              <span key={show.id}>{show.name}</span>
+            ))}
+          </Section>
+        )}
       </>
     )}
   </Container>
