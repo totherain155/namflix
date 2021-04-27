@@ -63,8 +63,8 @@ export default class extends React.Component {
         loading={loading}
         error={error}
         searchTerm={searchTerm}
-        updateTerm={this.updateTerm}
         handleSubmit={this.handleSubmit}
+        updateTerm={this.updateTerm}
       />
     );
   }
