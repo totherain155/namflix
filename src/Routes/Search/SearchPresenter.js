@@ -40,17 +40,17 @@ const SearchPresenter = ({
       <Loader />
     ) : (
       <>
-        {tvResults && tvResults.length > 0 && (
-          <Section title="TV Shows Results">
-            {tvResults.map((show) => (
-              <span key={show.id}>{show.name}</span>
-            ))}
-          </Section>
-        )}
         {movieResults && movieResults.length > 0 && (
           <Section title="Movie Results">
             {movieResults.map((movie) => (
               <span key={movie.id}>{movie.title}</span>
+            ))}
+          </Section>
+        )}
+        {tvResults && tvResults.length > 0 && (
+          <Section title="TV Shows Results">
+            {tvResults.map((show) => (
+              <span key={show.id}>{show.name}</span>
             ))}
           </Section>
         )}

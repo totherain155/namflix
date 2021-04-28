@@ -20,15 +20,15 @@ const HomePresenter = ({ nowPlaying, popular, upcoming, loading, error }) =>
           ))}
         </Section>
       )}
-      {popular && popular.length > 0 && (
-        <Section title="Popular movies">
+      {upcoming && upcoming.length > 0 && (
+        <Section title="Upcoming movies">
           {popular.map((movie) => (
             <span key={movie.id}>{movie.title}</span>
           ))}
         </Section>
       )}
-      {upcoming && upcoming.length > 0 && (
-        <Section title="upcoming movies">
+      {popular && popular.length > 0 && (
+        <Section title="Popular movies">
           {popular.map((movie) => (
             <span key={movie.id}>{movie.title}</span>
           ))}
