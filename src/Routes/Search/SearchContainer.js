@@ -30,7 +30,7 @@ export default class extends React.Component {
 
   searchByTerm = async () => {
     const { searchTerm } = this.state;
-    this.setState({ loading: true });
+    this.setState({ loading: true }); //검색했을때 loading을 true로 바꿔준다.
     try {
       const {
         data: { results: movieResults },
