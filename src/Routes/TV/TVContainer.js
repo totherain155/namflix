@@ -1,4 +1,4 @@
-import { tvApi } from "api";
+import { tvApi } from "../../api";
 import React from "react";
 import TVPresenter from "./TVPresenter";
 
