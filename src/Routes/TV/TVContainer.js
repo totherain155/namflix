@@ -11,7 +11,7 @@ export default class extends React.Component {
     loading: true,
   };
 
-  async componentDidMount() {
+  componentDidMount = async () => {
     try {
       const {
         data: { results: topRated },
@@ -38,7 +38,7 @@ export default class extends React.Component {
         loading: false,
       });
     }
-  }
+  };
   render() {
     const { topRated, popular, airingToday, error, loading } = this.state;
     console.log(this.state);
