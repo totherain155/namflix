@@ -39,7 +39,7 @@ export default class extends React.Component {
       this.setState({ error: "can't find anything" });
     } finally {
       this.setState({ loading: false, result });
-    }
+    } // result가 TV든, movie든 override 하게 된다.
   }
 
   render() {
