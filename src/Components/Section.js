@@ -18,7 +18,7 @@ const Grid = styled.div`
   grid-gap: 25px;
 `;
 
-const Section = ({ title, children }) => (
+const Section = ({ title, children /*reserved react prop*/ }) => (
   <Container>
     <Title>{title}</Title>
     <Grid>{children}</Grid>
