@@ -8,7 +8,7 @@ const Container = styled.div`
   }
 `;
 const Title = styled.span`
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
 `;
 const Grid = styled.div`
