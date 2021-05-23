@@ -20,7 +20,13 @@ export default class extends React.Component {
   };
 
   updateTerm = (event) => {
-    console.log(event);
+    const {
+      target: { value },
+    } = event;
+    console.log(value);
+    this.setState({
+      searchTerm: value,
+    });
   };
 
   searchByTerm = async () => {

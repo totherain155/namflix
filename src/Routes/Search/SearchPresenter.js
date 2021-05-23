@@ -48,7 +48,7 @@ const SearchPresenter = ({
           </Section>
         )}
         {tvResults && tvResults.length > 0 && (
-          <Section title="TV Shows Results">
+          <Section title="TV Show Results">
             {tvResults.map((show) => (
               <span key={show.id}>{show.name}</span>
             ))}
