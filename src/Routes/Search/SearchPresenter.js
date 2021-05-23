@@ -11,7 +11,7 @@ const Container = styled.div`
 const Form = styled.form`
   margin-bottom: 50px;
   width: 100%;
-`;
+`; //submit 이벤트를 차단
 
 const Input = styled.input`
   all: unset;
@@ -29,9 +29,9 @@ const SearchPresenter = ({
   updateTerm,
 }) => (
   <Container>
-    <Form onbSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit}>
       <Input
-        placeholder="Search Movies or TV Shows"
+        placeholder="Search Movies or TV Shows..."
         value={searchTerm}
         onChange={updateTerm}
       />
