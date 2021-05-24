@@ -15,7 +15,7 @@ const Form = styled.form`
 
 const Input = styled.input`
   all: unset;
-  font-size: 23px;
+  font-size: 24px;
   width: 100%;
 `;
 
