@@ -46,7 +46,7 @@ export default class extends React.Component {
       });
     } catch {
       this.setState({
-        error: "can't find your results",
+        error: "can't find your results...",
       });
     } finally {
       this.setState({
