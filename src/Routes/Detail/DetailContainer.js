@@ -26,7 +26,7 @@ export default class extends React.Component {
     const { isMovie } = this.state;
     const parsedId = parseInt(id);
     if (isNaN(parsedId)) {
-      return push("/"); //return시 함수는 종료한다.
+      return push("/"); // return시에 함수는 종료한다.
     }
     let result = null;
     try {
@@ -36,7 +36,7 @@ export default class extends React.Component {
         ({ data: result } = await tvApi.showDetail(parsedId));
       }
     } catch {
-      this.setState({ error: "can't find anything" });
+      this.setState({ error: "can't find anything.." });
     } finally {
       this.setState({ loading: false, result });
     } // result가 TV든, movie든 override 하게 된다.
