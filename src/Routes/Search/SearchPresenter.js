@@ -24,8 +24,8 @@ const SearchPresenter = ({
   loading,
   tvResults,
   searchTerm,
-  handleSubmit,
   updateTerm,
+  handleSubmit,
   error,
 }) => (
   <Container>
