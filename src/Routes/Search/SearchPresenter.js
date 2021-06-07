@@ -27,37 +27,7 @@ const SearchPresenter = ({
   updateTerm,
   handleSubmit,
   error,
-}) => (
-  <Container>
-    <Form onSubmit={handleSubmit}>
-      <Input
-        placeholder="Search Movies or TV Shows"
-        value={searchTerm}
-        onChange={updateTerm}
-      />
-    </Form>
-    {loading ? (
-      <Loader />
-    ) : (
-      <>
-        {movieResults && movieResults.length > 0 && (
-          <Section title="Movie Results">
-            {movieResults.map((movie) => (
-              <span key={movie.id}>{movie.title}</span>
-            ))}
-          </Section>
-        )}
-        {tvResults && tvResults.length > 0 && (
-          <Section title="TV Show Results">
-            {tvResults.map((tv) => (
-              <span key={tv.id}>{tv.name}</span>
-            ))}
-          </Section>
-        )}
-      </>
-    )}
-  </Container>
-);
+}) => null;
 
 SearchPresenter.propTypes = {
   movieResults: PropTypes.array,
