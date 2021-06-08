@@ -4,20 +4,11 @@ import styled from "styled-components";
 import Loader from "Components/Loader";
 import Section from "Components/Section";
 
-const Container = styled.div`
-  padding: 0px 20px;
-`;
+const Container = styled.div``;
 
-const Form = styled.form`
-  margin-bottom: 50px;
-  width: 100%;
-`; //submit 이벤트를 차단
+const Form = styled.form``; //submit 이벤트를 차단
 
-const Input = styled.input`
-  all: unset;
-  font-size: 23px;
-  width: 100%;
-`;
+const Input = styled.input``;
 
 const SearchPresenter = ({
   movieResults,
