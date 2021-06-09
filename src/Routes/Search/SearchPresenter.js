@@ -18,7 +18,11 @@ const SearchPresenter = ({
   updateTerm,
   handleSubmit,
   error,
-}) => null;
+}) => (
+  <Container>
+    <Form></Form>
+  </Container>
+);
 
 SearchPresenter.propTypes = {
   movieResults: PropTypes.array,
