@@ -20,7 +20,9 @@ const SearchPresenter = ({
   error,
 }) => (
   <Container>
-    <Form onSubmit={handleSubmit}></Form>
+    <Form onSubmit={handleSubmit}>
+      <Input placeholder="Search Movies or TV Shows..." value={searchTerm} />
+    </Form>
   </Container>
 );
 
