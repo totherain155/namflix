@@ -4,11 +4,20 @@ import styled from "styled-components";
 import Loader from "Components/Loader";
 import Section from "Components/Section";
 
-const Container = styled.div``;
+const Container = styled.div`
+  padding: 0px 20px;
+`;
 
-const Form = styled.form``; //submit 이벤트를 차단
+const Form = styled.form`
+  margin-bottom: 50px;
+  width: 100%;
+`; //submit 이벤트를 차단
 
-const Input = styled.input``;
+const Input = styled.input`
+  all: unset;
+  font-size: 28px;
+  width: 100%;
+`;
 
 const SearchPresenter = ({
   movieResults,
@@ -21,7 +30,7 @@ const SearchPresenter = ({
 }) => (
   <Container>
     <Form onSubmit={handleSubmit}>
-      <Input placeholder="Search Movies or TV Shows..." value={searchTerm} />
+      <Input placeholder="Search Movies or TV Shows" value={searchTerm} />
     </Form>
   </Container>
 );
