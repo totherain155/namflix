@@ -30,8 +30,32 @@ const SearchPresenter = ({
 }) => (
   <Container>
     <Form onSubmit={handleSubmit}>
-      <Input placeholder="Search Movies or TV Shows" value={searchTerm} />
+      <Input
+        placeholder="Search Movies or TV Shows"
+        value={searchTerm}
+        onChange={updateTerm}
+      />
     </Form>
+    {loading ? (
+      <Loader />
+    ) : (
+      <>
+        {movieResults && movieResults.length > 0 && (
+          <Section title="Movie Results">
+            {movieResults.map((movie) => (
+              <span id={movie.id}>{movie.title}</span>
+            ))}
+          </Section>
+        )}
+        {tvResults && tvResults.length > 0 && (
+          <Section title="TV Shows">
+            {tvResults.map((show) => (
+              <span id={show.id}>{show.name}</span>
+            ))}
+          </Section>
+        )}
+      </>
+    )}
   </Container>
 );
 
