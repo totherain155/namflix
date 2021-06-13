@@ -27,6 +27,19 @@ const SearchPresenter = ({
         onChange={updateTerm}
       />
     </Form>
+    {loading ? (
+      <Loader />
+    ) : (
+      <>
+        {movieResults && movieResults.length > 0 && (
+          <Section title="Movie Results">
+            {movieRestuls.map((movie) => (
+              <span id={movie.id}>{movie.title}</span>
+            ))}
+          </Section>
+        )}
+      </>
+    )}
   </Container>
 );
 
