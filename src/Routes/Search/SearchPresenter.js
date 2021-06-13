@@ -4,6 +4,12 @@ import styled from "styled-components";
 import Loader from "Components/Loader";
 import Section from "Components/Section";
 
+const Container = styled.div``;
+
+const Form = styled.form``;
+
+const Input = styled.input``;
+
 const SearchPresenter = ({
   movieResults,
   loading,
@@ -12,7 +18,13 @@ const SearchPresenter = ({
   updateTerm,
   handleSubmit,
   error,
-}) => null;
+}) => (
+  <Container>
+    <Form onSubmit={handleSubmit}>
+      <Input placeholder="Search Movies or TV Shows" value={searchTerm} />
+    </Form>
+  </Container>
+);
 
 SearchPresenter.propTypes = {
   movieResults: PropTypes.array,
