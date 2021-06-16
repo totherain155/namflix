@@ -35,7 +35,6 @@ const HomePresenter = ({ nowPlaying, popular, upcoming, loading, error }) =>
           ))}
         </Section>
       )}
-      {error && <Message color="#e74c3c" text={error} />}
     </Container>
   );
 
