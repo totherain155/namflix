@@ -35,6 +35,7 @@ const HomePresenter = ({ nowPlaying, popular, upcoming, loading, error }) =>
           ))}
         </Section>
       )}
+      {error && <Message text={error} />}
     </Container>
   );
 

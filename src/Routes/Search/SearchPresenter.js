@@ -55,6 +55,13 @@ const SearchPresenter = ({
             ))}
           </Section>
         )}
+        {error && <Message color="#e74c3c" text={error} />}
+        {movieResults &&
+          tvResults &&
+          movieResults.length === 0 &&
+          tvResults.length === 0 && (
+            <Message color="#bdc3c7" text="Nothing found" />
+          )}
       </>
     )}
   </Container>

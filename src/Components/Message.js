@@ -1,6 +1,6 @@
 import React from "react";
-import PropTypes from "prop-types";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const Container = styled.div`
   width: 100vw;
@@ -12,7 +12,7 @@ const Text = styled.span`
   color: ${(props) => props.color};
 `;
 
-const Message = ({ text, color }) => (
+const Message = ({ color, text }) => (
   <Container>
     <Text color={color}>{text}</Text>
   </Container>
