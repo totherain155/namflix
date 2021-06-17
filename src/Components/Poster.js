@@ -26,9 +26,9 @@ const Poster = ({ id, title, year, rating, imgUrl, isMovie = false }) => (
           </span>{" "}
           {rating} / 10
         </Rating>
-        <Title>{title}</Title>
-        <Year>{year}</Year>
       </ImageContainer>
+      <Title>{title}</Title>
+      <Year>{year}</Year>
     </Container>
   </Link>
 );
