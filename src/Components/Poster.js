@@ -5,18 +5,18 @@ import { Link } from "react-router-dom";
 
 const Container = styled.div``;
 
-const ImageContainer = styled.div``;
-
 const Image = styled.div``;
-
-const Year = styled.span``;
-
-const Title = styled.span``;
 
 const Rating = styled.span``;
 
+const ImageContainer = styled.div``;
+
+const Title = styled.span``;
+
+const Year = styled.span``;
+
 const Poster = ({ id, title, year, rating, imgUrl, isMovie = false }) => (
-  <Link to={isMovie ? `/movie/:${id}` : `/show/:${id}`}>
+  <Link to={isMovie ? `/movie/${id}` : `/show/${id}`}>
     <Container>
       <ImageContainer>
         <Image bgUrl={imgUrl} />
