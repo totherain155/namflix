@@ -18,21 +18,43 @@ const TVPresenter = ({ topRated, popular, airingToday, loading, error }) =>
       {topRated && topRated.length > 0 && (
         <Section title="Top Rated Shows">
           {topRated.map((show) => (
-            <Poster />
+            <Poster
+              key={show.id}
+              id={show.id}
+              title={show.original_name}
+              imgUrl={show.poster_path}
+              year={show.first_air_date && show.first_air_date.substring(0, 4)}
+              rating={show.vote_average}
+              // {isMovie}의 default 값은 false기 때문에 적지 않아도 된다.
+            />
           ))}
         </Section>
       )}
       {popular && popular.length > 0 && (
         <Section title="Popular Shows">
           {popular.map((show) => (
-            <Poster />
+            <Poster
+              key={show.id}
+              id={show.id}
+              title={show.original_name}
+              imgUrl={show.poster_path}
+              year={show.first_air_date && show.first_air_date.substring(0, 4)}
+              rating={show.vote_average}
+            />
           ))}
         </Section>
       )}
       {airingToday && airingToday.length > 0 && (
         <Section title="Airing Today">
           {airingToday.map((show) => (
-            <Poster />
+            <Poster
+              key={show.id}
+              id={show.id}
+              title={show.original_name}
+              imgUrl={show.poster_path}
+              year={show.first_air_date && show.first_air_date.substring(0, 4)}
+              rating={show.vote_average}
+            />
           ))}
         </Section>
       )}
