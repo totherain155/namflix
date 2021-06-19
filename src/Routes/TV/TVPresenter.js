@@ -18,45 +18,21 @@ const TVPresenter = ({ topRated, popular, airingToday, loading, error }) =>
       {topRated && topRated.length > 0 && (
         <Section title="Top Rated Shows">
           {topRated.map((show) => (
-            <Poster
-              key={show.id}
-              id={show.id}
-              imgUrl={show.poster_path}
-              title={show.original_name}
-              rating={show.vote_average}
-              // isMovie={true} isMovie의 default값은 false기 때문에 생략해도 된다.
-              year={show.first_air_date && show.first_air_date.substring(0, 4)}
-            />
+            <Poster />
           ))}
         </Section>
       )}
       {popular && popular.length > 0 && (
         <Section title="Popular Shows">
           {popular.map((show) => (
-            <Poster
-              key={show.id}
-              id={show.id}
-              imgUrl={show.poster_path}
-              title={show.original_name}
-              rating={show.vote_average}
-              // isMovie={true} isMovie의 default값은 false기 때문에 생략해도 된다.
-              year={show.first_air_date && show.first_air_date.substring(0, 4)}
-            />
+            <Poster />
           ))}
         </Section>
       )}
       {airingToday && airingToday.length > 0 && (
         <Section title="Airing Today">
           {airingToday.map((show) => (
-            <Poster
-              key={show.id}
-              id={show.id}
-              imgUrl={show.poster_path}
-              title={show.original_name}
-              rating={show.vote_average}
-              // isMovie={true} isMovie의 default값은 false기 때문에 생략해도 된다.
-              year={show.first_air_date && show.first_air_date.substring(0, 4)}
-            />
+            <Poster />
           ))}
         </Section>
       )}
