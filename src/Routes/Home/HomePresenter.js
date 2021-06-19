@@ -18,7 +18,15 @@ const HomePresenter = ({ nowPlaying, popular, upcoming, loading, error }) =>
       {nowPlaying && nowPlaying.length > 0 && (
         <Section title="Now Playing">
           {nowPlaying.map((movie) => (
-            <Poster />
+            <Poster
+              key={movie.id}
+              id={movie.id}
+              title={movie.original_title}
+              imgUrl={movie.poster_path}
+              year={movie.release_date && movie.release_date.substring(0, 4)}
+              rating={movie.vote_average}
+              isMovie={true}
+            />
           ))}
         </Section>
       )}
