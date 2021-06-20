@@ -11,9 +11,16 @@ const Rating = styled.span``;
 
 const ImageContainer = styled.div``;
 
-const Title = styled.span``;
+const Title = styled.span`
+  display: block;
+  font-size: 13px;
+  margin-bottom: 5px;
+`;
 
-const Year = styled.span``;
+const Year = styled.span`
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.6);
+`;
 
 const Poster = ({ id, title, year, rating, imgUrl, isMovie = false }) => (
   <Link to={isMovie ? `/movie/${id}` : `/show/${id}`}>
