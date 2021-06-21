@@ -23,7 +23,7 @@ const HomePresenter = ({ nowPlaying, popular, upcoming, loading, error }) =>
               id={movie.id}
               title={movie.original_title}
               imgUrl={movie.poster_path}
-              year={movie.release_date && movie.release_date.substring(0, 4)}
+              year={movie.release_date}
               rating={movie.vote_average}
               isMovie={true}
             />
@@ -38,7 +38,7 @@ const HomePresenter = ({ nowPlaying, popular, upcoming, loading, error }) =>
               id={movie.id}
               title={movie.original_title}
               imgUrl={movie.poster_path}
-              year={movie.release_date && movie.release_date.substring(0, 4)}
+              year={movie.release_date}
               rating={movie.vote_average}
               isMovie={true}
             />
@@ -53,7 +53,7 @@ const HomePresenter = ({ nowPlaying, popular, upcoming, loading, error }) =>
               id={movie.id}
               title={movie.original_title}
               imgUrl={movie.poster_path}
-              year={movie.release_date && movie.release_date.substring(0, 4)}
+              year={movie.release_date}
               rating={movie.vote_average}
               isMovie={true}
             />

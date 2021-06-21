@@ -23,7 +23,7 @@ const TVPresenter = ({ topRated, popular, airingToday, loading, error }) =>
               id={show.id}
               title={show.original_name}
               imgUrl={show.poster_path}
-              year={show.first_air_date && show.first_air_date.substring(0, 4)}
+              year={show.first_air_date}
               rating={show.vote_average}
               // {isMovie}의 default 값은 false기 때문에 적지 않아도 된다.
             />
@@ -38,7 +38,7 @@ const TVPresenter = ({ topRated, popular, airingToday, loading, error }) =>
               id={show.id}
               title={show.original_name}
               imgUrl={show.poster_path}
-              year={show.first_air_date && show.first_air_date.substring(0, 4)}
+              year={show.first_air_date}
               rating={show.vote_average}
             />
           ))}
@@ -52,7 +52,7 @@ const TVPresenter = ({ topRated, popular, airingToday, loading, error }) =>
               id={show.id}
               title={show.original_name}
               imgUrl={show.poster_path}
-              year={show.first_air_date && show.first_air_date.substring(0, 4)}
+              year={show.first_air_date}
               rating={show.vote_average}
             />
           ))}
