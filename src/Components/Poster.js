@@ -8,56 +8,26 @@ const Container = styled.div`
 `;
 
 const Image = styled.div`
-  background-image: url(${(props) => props.bgUrl});
-  height: 180px;
-  background-size: cover;
-  border-radius: 4px;
-  background-position: center center;
-  transition: opacity 0.2s linear;
+  background-image: ${(props) => props.bgUrl()};
 `;
 
 const Rating = styled.span`
-  bottom: 5px;
-  right: 5px;
-  position: absolute;
-  opacity: 0;
-  transition: opacity 0.1s linear;
+  font-size: 10px;
 `;
 
-const ImageContainer = styled.div`
-  margin-bottom: 5px;
-  position: relative;
-  &:hover {
-    ${Image} {
-      opacity: 0.3;
-    }
-    ${Rating} {
-      opacity: 1;
-    }
-  }
-`;
+const ImageContainer = styled.div``;
 
 const Title = styled.span`
-  display: block;
-  margin-bottom: 5px;
+  display: blcok;
 `;
 
-const Year = styled.span`
-  font-size: 10px;
-  color: rgba(255, 255, 255, 0.6);
-`;
+const Year = styled.span``;
 
 const Poster = ({ id, title, year, rating, imgUrl, isMovie = false }) => (
   <Link to={isMovie ? `/movie/${id}` : `/show/${id}`}>
     <Container>
       <ImageContainer>
-        <Image
-          bgUrl={
-            imgUrl
-              ? `https://image.tmdb.org/t/p/w300${imgUrl}`
-              : require("../assets/noPosterSmall.png").default
-          }
-        />
+        <Image bgUrl={imgUrl} />
         <Rating>
           <span role="img" aria-label="rating">
             ⭐
@@ -66,7 +36,7 @@ const Poster = ({ id, title, year, rating, imgUrl, isMovie = false }) => (
         </Rating>
       </ImageContainer>
       <Title>
-        {title.length > 18 ? `${title.substring(0, 15)}...` : title}
+        {title.length > 18 ? `${title.substring(0, 18)}...` : title}
       </Title>
       <Year>{year}</Year>
     </Container>
