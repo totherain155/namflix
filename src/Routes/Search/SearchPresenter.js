@@ -50,7 +50,7 @@ const SearchPresenter = ({
                 id={movie.id}
                 title={movie.original_title}
                 imgUrl={movie.poster_path}
-                year={movie.release_date && movie.release_date.substring(0, 4)}
+                year={movie.release_date}
                 rating={movie.vote_average}
                 isMovie={true}
               />
@@ -65,9 +65,7 @@ const SearchPresenter = ({
                 id={show.id}
                 title={show.original_name}
                 imgUrl={show.poster_path}
-                year={
-                  show.first_air_date && show.first_air_date.substring(0, 4)
-                }
+                year={show.first_air_date}
                 rating={show.vote_average}
                 // {isMovie}의 default 값은 false기 때문에 적지 않아도 된다.
               />
