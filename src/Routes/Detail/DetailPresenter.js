@@ -39,25 +39,27 @@ const Cover = styled.div`
   background-size: cover;
   border-radius: 3px;
 `;
-
 const Data = styled.div`
   width: 70%;
+  height: 100%;
   margin-left: 10px;
 `;
 
 const Title = styled.h3`
   font-size: 32px;
+
   margin-bottom: 10px;
-`; // span은 margin 값을 갖지 않는다.
+`;
 
 const ItemContainer = styled.div`
+  display: flex;
   margin: 20px 0;
 `;
 
-const Item = styled.span``;
+const Item = styled.div``;
 
-const Divider = styled.span`
-  margin: 0px 10px;
+const Divider = styled.div`
+  margin: 0 5px;
 `;
 
 const Overview = styled.p`
@@ -85,9 +87,7 @@ const DetailPresenter = ({ result, loading, error }) =>
         />
         <Data>
           <Title>
-            {result.original_title
-              ? result.original_title
-              : result.original_name}
+            {result.title ? result.original_title : result.original_name}
           </Title>
           <ItemContainer>
             <Item>
@@ -102,10 +102,10 @@ const DetailPresenter = ({ result, loading, error }) =>
             <Divider>•</Divider>
             <Item>
               {result.genres &&
-                result.genres.map((genre, index) =>
+                result.genres.map((item, index) =>
                   index === result.genres.length - 1
-                    ? genre.name
-                    : `${genre.name} / `
+                    ? item.name
+                    : `${item.name} / `
                 )}
             </Item>
           </ItemContainer>
