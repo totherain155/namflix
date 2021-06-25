@@ -14,7 +14,7 @@ const Container = styled.div`
 const TVPresenter = ({ topRated, popular, airingToday, loading, error }) => (
   <>
     <Helmet>
-      <title>TV Shows | Namflix</title>
+      <title>TVShow | Namflix </title>
     </Helmet>
     {loading ? (
       <Loader />
@@ -26,11 +26,13 @@ const TVPresenter = ({ topRated, popular, airingToday, loading, error }) => (
               <Poster
                 key={show.id}
                 id={show.id}
-                title={show.original_name}
                 imgUrl={show.poster_path}
-                year={show.first_air_date}
+                title={show.original_name}
                 rating={show.vote_average}
-                // {isMovie}의 default 값은 false기 때문에 적지 않아도 된다.
+                // isMovie={true} isMovie의 default값은 false기 때문에 생략해도 된다.
+                year={
+                  show.first_air_date && show.first_air_date.substring(0, 4)
+                }
               />
             ))}
           </Section>
@@ -41,10 +43,13 @@ const TVPresenter = ({ topRated, popular, airingToday, loading, error }) => (
               <Poster
                 key={show.id}
                 id={show.id}
-                title={show.original_name}
                 imgUrl={show.poster_path}
-                year={show.first_air_date}
+                title={show.original_name}
                 rating={show.vote_average}
+                // isMovie={true} isMovie의 default값은 false기 때문에 생략해도 된다.
+                year={
+                  show.first_air_date && show.first_air_date.substring(0, 4)
+                }
               />
             ))}
           </Section>
@@ -55,10 +60,11 @@ const TVPresenter = ({ topRated, popular, airingToday, loading, error }) => (
               <Poster
                 key={show.id}
                 id={show.id}
-                title={show.original_name}
                 imgUrl={show.poster_path}
-                year={show.first_air_date}
+                title={show.original_name}
                 rating={show.vote_average}
+                // isMovie={true} isMovie의 default값은 false기 때문에 생략해도 된다.
+                year={show.first_air_date}
               />
             ))}
           </Section>
@@ -66,6 +72,7 @@ const TVPresenter = ({ topRated, popular, airingToday, loading, error }) => (
         {error && <Message color="#e74c3c" text={error} />}
       </Container>
     )}
+    ;
   </>
 );
 

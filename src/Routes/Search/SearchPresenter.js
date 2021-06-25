@@ -33,7 +33,7 @@ const SearchPresenter = ({
 }) => (
   <Container>
     <Helmet>
-      <title>Search | Namflix</title>
+      <title> Search | Namflix </title>
     </Helmet>
     <Form onSubmit={handleSubmit}>
       <Input
@@ -52,11 +52,11 @@ const SearchPresenter = ({
               <Poster
                 key={movie.id}
                 id={movie.id}
-                title={movie.original_title}
                 imgUrl={movie.poster_path}
-                year={movie.release_date}
+                title={movie.original_title}
                 rating={movie.vote_average}
                 isMovie={true}
+                year={movie.release_date && movie.release_date.substring(0, 4)}
               />
             ))}
           </Section>
@@ -67,11 +67,11 @@ const SearchPresenter = ({
               <Poster
                 key={show.id}
                 id={show.id}
-                title={show.original_name}
                 imgUrl={show.poster_path}
-                year={show.first_air_date}
+                title={show.original_name}
                 rating={show.vote_average}
-                // {isMovie}의 default 값은 false기 때문에 적지 않아도 된다.
+                // isMovie={true} isMovie의 default값은 false기 때문에 생략해도 된다.
+                year={show.first_air_date}
               />
             ))}
           </Section>

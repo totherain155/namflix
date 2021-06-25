@@ -14,15 +14,12 @@ const Container = styled.div`
 const HomePresenter = ({ nowPlaying, popular, upcoming, loading, error }) => (
   <>
     <Helmet>
-      <title>Movies | Namflix</title>
+      <title>Movie | Namflix </title>
     </Helmet>
     {loading ? (
       <Loader />
     ) : (
       <Container>
-        <Helmet>
-          <title>Movies | Namflix</title>
-        </Helmet>
         {nowPlaying && nowPlaying.length > 0 && (
           <Section title="Now Playing">
             {nowPlaying.map((movie) => (
@@ -33,7 +30,7 @@ const HomePresenter = ({ nowPlaying, popular, upcoming, loading, error }) => (
                 title={movie.original_title}
                 rating={movie.vote_average}
                 isMovie={true}
-                year={movie.release_date && movie.release_date.substring(0, 4)}
+                year={movie.release_date}
               />
             ))}
           </Section>
@@ -71,6 +68,7 @@ const HomePresenter = ({ nowPlaying, popular, upcoming, loading, error }) => (
         {error && <Message color="#e74c3c" text={error} />}
       </Container>
     )}
+    ;
   </>
 );
 
