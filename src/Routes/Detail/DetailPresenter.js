@@ -58,7 +58,7 @@ const ItemContainer = styled.div`
 const Item = styled.span``;
 
 const Divider = styled.span`
-  margin: 0px 10px;
+  margin: 0px 15px;
 `;
 
 const Overview = styled.p`
