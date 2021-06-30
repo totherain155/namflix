@@ -111,12 +111,11 @@ const DetailPresenter = ({ result, loading, error }) =>
             <Item>{result.runtime || result.episode_run_time} min</Item>
             <Divider>•</Divider>
             <Item>
-              {result.genres &&
-                result.genres.map((genre, index) =>
-                  index === result.genres.length - 1
-                    ? genre.name
-                    : `${genre.name} / `
-                )}
+              {result.genres.map((item, index) =>
+                index === result.genres.length - 1
+                  ? item.name
+                  : `${item.name} / `
+              )}
             </Item>
           </ItemContainer>
           <Overview>{result.overview}</Overview>
