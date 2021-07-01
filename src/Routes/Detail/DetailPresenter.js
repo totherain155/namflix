@@ -64,7 +64,7 @@ const Divider = styled.span`
 const Overview = styled.p`
   font-size: 12px;
   opacity: 0.7;
-  line-height: 1.5;
+  line-height: 1.3;
   width: 50%;
 `;
 
