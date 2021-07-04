@@ -30,7 +30,7 @@ const ImageContainer = styled.div`
   margin-bottom: 5px;
   &:hover {
     ${Image} {
-      opacity: 0.5;
+      opacity: 0.6;
     }
     ${Rating} {
       opacity: 1;
