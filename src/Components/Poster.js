@@ -22,7 +22,7 @@ const Rating = styled.span`
   bottom: 3px;
   right: 3px;
   opacity: 0;
-  transition: 0.3s linear;
+  transition: 0.2s linear;
 `;
 
 const ImageContainer = styled.div`
