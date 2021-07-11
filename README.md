@@ -14,17 +14,18 @@ App.
 
 - [x] Now playing (Movie)
 - [x] Upcoming (Movie)
-- [x] Top Rated (TV, Movie)
-- [x] Popular (TV, Movie)
+- [x] Top Rated (TV)
 - [x] Airing Today (TV)
-- [x] TV Show Detail
+- [x] Popular (Movie, TV)
 - [x] Movie Detail
+- [x] TV Show Detail
 - [x] Search (Movie, TV)
+- [ ] IMBD LINK
 
 ## Code Challenges
 
 - [ ] IMDB Link
 - [ ] Tabs inside of Movie / Show Details (Youtube videos, Production Company & Countries)
 - [ ] Collections Link
-- [ ] /Collections Route
+- [ ] Collections Route
 - [ ] on TV Show, show seasons and creators
