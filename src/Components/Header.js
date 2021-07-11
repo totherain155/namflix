@@ -4,7 +4,7 @@ import { Link, withRouter } from "react-router-dom";
 
 const Header = styled.header`
   color: white;
-  position: fixed;
+  position: fixed; // scroll해도 해당 위치에 있을 수 있다.
   top: 0;
   left: 0;
   width: 100%;

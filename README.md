@@ -13,9 +13,9 @@ App.
 ## API Verbs
 
 - [x] Now playing (Movie)
-- [x] Top Rated (TV)
-- [x] Upcoming (TV, Movie)
-- [x] Popular (TV, X)
+- [x] Upcoming (Movie)
+- [x] Top Rated (TV, Movie)
+- [x] Popular (TV, Movie)
 - [x] Airing Today (TV)
 - [x] TV Show Detail
 - [x] Movie Detail
