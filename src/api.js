@@ -41,7 +41,7 @@ export const tvApi = {
   search: (term) =>
     api.get("search/tv", {
       params: {
-        query: encodeURIComponent(term),
+        query: encodeURIComponent(term), // URL에서 인코딩을 해줘야 한다.(string으로 되어있어야하기 때문이다. )
       },
     }),
 };
