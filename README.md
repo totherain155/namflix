@@ -20,7 +20,6 @@ App.
 - [x] Movie Detail
 - [x] TV Show Detail
 - [x] Search (Movie, TV)
-- [ ] IMBD LINK
 
 ## Code Challenges
 

@@ -19,6 +19,7 @@ export default class extends React.Component {
     }
   };
 
+  // input 값으로 검색을 하고 리턴값을 받을 때 작동한다.
   updateTerm = (event) => {
     const {
       target: { value },
@@ -66,7 +67,7 @@ export default class extends React.Component {
         tvResults={tvResults}
         error={error}
         searchTerm={searchTerm}
-        handleSubmit={this.handleSubmit}
+        handleSubmit={this.handleSubmit} //form을 제출할때 handleSubmit을 호출한다.
         updateTerm={this.updateTerm}
       />
     );
