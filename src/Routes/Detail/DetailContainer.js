@@ -24,7 +24,7 @@ export default class extends React.Component {
       history: { push },
     } = this.props;
     const { isMovie } = this.state;
-    const parsedId = parseInt(id);
+    const parsedId = Number(id);
     if (isNaN(parsedId)) {
       return push("/"); // return시에 함수는 종료한다.
     }
