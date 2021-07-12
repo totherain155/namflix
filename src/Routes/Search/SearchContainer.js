@@ -67,6 +67,7 @@ export default class extends React.Component {
         tvResults={tvResults}
         error={error}
         searchTerm={searchTerm}
+        //searchPresenter에서 폼을 만들고 셋업한뒤 handleSubmit을 호출하기 위해 onSubmit을 호출할 것이다.
         handleSubmit={this.handleSubmit} //form을 제출할때 handleSubmit을 호출한다.
         updateTerm={this.updateTerm}
       />
