@@ -11,6 +11,7 @@ const Container = styled.div`
   padding: 20px;
 `;
 
+//HomeContainer에서 넘어온 props를 사용한다.
 const HomePresenter = ({ nowPlaying, popular, upcoming, loading, error }) => (
   <>
     <Helmet>
