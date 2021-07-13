@@ -20,6 +20,7 @@ export default class extends React.Component {
   };
 
   // input 값으로 검색을 하고 리턴값을 받을 때 작동한다.
+  // update에 관한 value값이 있는 function
   updateTerm = (event) => {
     const {
       target: { value },
