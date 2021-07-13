@@ -19,6 +19,7 @@ const Grid = styled.div`
 `;
 
 const Section = ({ title, children /*reserved react prop*/ }) => (
+  // Container => Title => Grid => Children
   <Container>
     <Title>{title}</Title>
     <Grid>{children}</Grid>

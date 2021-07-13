@@ -10,9 +10,12 @@ const Container = styled.div`
   margin-top: 20px;
 `;
 
+// const Loader = () => <Container></Container>
+// export default Loader
+
 export default () => (
   <Container>
-    <span role="img" aria-label="Loading">
+    <span role="img" aria-label="Loading" /*people for blind */>
       ⏰
     </span>
   </Container>
