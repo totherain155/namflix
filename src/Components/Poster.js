@@ -56,7 +56,8 @@ const Poster = ({ id, title, year, rating, imgUrl, isMovie = false }) => (
           bgUrl={
             imgUrl
               ? `https://image.tmdb.org/t/p/w500/${imgUrl}`
-              : require(`../assets/noPosterSmall.png`).default
+              : require(`../assets/noPosterSmall.png` /*object형태로 반환되기 때문에 뒤에 default를 더 호출한다.*/)
+                  .default
           }
         />
         <Rating>
