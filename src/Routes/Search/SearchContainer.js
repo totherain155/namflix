@@ -12,7 +12,7 @@ export default class extends React.Component {
   };
 
   handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(); // browser가 page를 새로고침하고 내 state를 잃어버리는 것을 막기위해서 prevent한다.
     const { searchTerm } = this.state;
     if (searchTerm !== "") {
       this.searchByTerm();
@@ -25,7 +25,7 @@ export default class extends React.Component {
     const {
       target: { value },
     } = event;
-    console.log(value);
+    // console.log(value);
     this.setState({
       searchTerm: value,
     });

@@ -31,7 +31,7 @@ const HomePresenter = ({ nowPlaying, popular, upcoming, loading, error }) => (
                 title={movie.original_title}
                 rating={movie.vote_average}
                 isMovie={true}
-                year={movie.release_date}
+                year={movie.release_date && movie.release_date.substring(0, 4)}
               />
             ))}
           </Section>

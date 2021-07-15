@@ -56,7 +56,9 @@ const SearchPresenter = ({
                 title={movie.original_title}
                 rating={movie.vote_average}
                 isMovie={true}
-                year={movie.release_date && movie.release_date.substring(0, 4)}
+                year={
+                  movie.release_date ? movie.release_date.substring(0, 4) : ""
+                }
               />
             ))}
           </Section>
@@ -71,7 +73,9 @@ const SearchPresenter = ({
                 title={show.original_name}
                 rating={show.vote_average}
                 // isMovie={true} isMovie의 default값은 false기 때문에 생략해도 된다.
-                year={show.first_air_date}
+                year={
+                  show.first_air_date ? show.first_air_date.substring(0, 4) : ""
+                }
               />
             ))}
           </Section>
