@@ -103,9 +103,12 @@ const DetailPresenter = ({ result, loading, error }) =>
           </Title>
           <ItemContainer>
             <Item>
-              {result.release_date
-                ? result.release_date.substring(0, 4)
-                : result.first_air_date.substring(0, 4)}
+              {result.release_date ? result.release_date.substring(0, 4) : ""}
+              {
+                result.first_air_date
+                  ? result.first_air_date.substring(0, 4)
+                  : "" /*연도가 없을경우 나타나는 에러처리 */
+              }
             </Item>
             <Divider>•</Divider>
             <Item>{result.runtime || result.episode_run_time} min</Item>
