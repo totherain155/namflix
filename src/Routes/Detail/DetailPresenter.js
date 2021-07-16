@@ -58,7 +58,7 @@ const ItemContainer = styled.div`
 const Item = styled.span``;
 
 const Divider = styled.span`
-  margin: 0px 15px;
+  margin: 0px 15px; // 위아래는 0이고 좌우는 15px margin
 `;
 
 const Overview = styled.p`
