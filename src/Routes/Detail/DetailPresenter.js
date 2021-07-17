@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import Helmet from "react-helmet";
 import Loader from "Components/Loader";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   height: calc(100vh - 50px);
@@ -68,6 +69,16 @@ const Overview = styled.p`
   width: 50%;
 `;
 
+const Logo = styled.div`
+  background-image: url(${(props) => props.logo});
+  height: 100%;
+  width: 30%;
+  z-index: 1;
+  background-position: center center;
+  background-size: cover;
+`;
+const Video = styled.div``;
+
 const DetailPresenter = ({ result, loading, error }) =>
   loading ? (
     <>
@@ -120,6 +131,27 @@ const DetailPresenter = ({ result, loading, error }) =>
                   : `${item.name} / `
               )}
             </Item>
+            <Divider>•</Divider>
+            <a href={result.homepage} target="_blank">
+              <Item>HomePage</Item>
+            </a>
+            <Divider>•</Divider>
+            <Logo
+              logo={result.production_companies.map(
+                (item) => `https://image.tmdb.org/t/p/w300/${item.logo_path}`
+              )}
+            />
+
+            <Divider>•</Divider>
+            <Item>
+              {result.production_companies.map((item, index) => {
+                if (index === 0) {
+                  return <span>{item.origin_country}</span>;
+                }
+              })}
+            </Item>
+            <Divider>•</Divider>
+            <Video>{}</Video>
           </ItemContainer>
           <Overview>{result.overview}</Overview>
         </Data>
