@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Helmet from "react-helmet";
 import Loader from "Components/Loader";
 import { Link } from "react-router-dom";
+import ReactPlayer from "react-player";
 
 const Container = styled.div`
   height: calc(100vh - 50px);
@@ -67,6 +68,7 @@ const Overview = styled.p`
   opacity: 0.7;
   line-height: 1.3;
   width: 50%;
+  margin-top: 20px;
 `;
 
 const Logo = styled.div`
@@ -137,11 +139,10 @@ const DetailPresenter = ({ result, loading, error }) =>
             </a>
             <Divider>•</Divider>
             <Logo
-              logo={result.production_companies.map(
-                (item) => `https://image.tmdb.org/t/p/w300/${item.logo_path}`
-              )}
+              logo={result.production_companies.map((item) => (
+                <span>{`https://image.tmdb.org/t/p/w300/${item.logo_path}`}</span>
+              ))}
             />
-
             <Divider>•</Divider>
             <Item>
               {result.production_companies.map((item, index) => {
@@ -151,8 +152,14 @@ const DetailPresenter = ({ result, loading, error }) =>
               })}
             </Item>
             <Divider>•</Divider>
-            <Video>{}</Video>
           </ItemContainer>
+          <ReactPlayer
+            width="500px"
+            height="300px"
+            url={`https://www.youtube.com/watch?v=${
+              result.videos && result.videos.results.map((item) => item.key)
+            }`}
+          />
           <Overview>{result.overview}</Overview>
         </Data>
       </Content>
