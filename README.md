@@ -23,8 +23,8 @@ App.
 
 ## Code Challenges
 
-- [ ] IMDB Link
-- [ ] Tabs inside of Movie / Show Details (Youtube videos, Production Company & Countries)
+- [x] IMDB Link
+- [x] Tabs inside of Movie / Show Details (Youtube videos, Production Company & Countries)
 - [ ] Collections Link
 - [ ] Collections Route
 - [ ] on TV Show, show seasons and creators
