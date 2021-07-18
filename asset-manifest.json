@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/namflix/static/js/main.ed426c68.chunk.js",
+    "main.js.map": "/namflix/static/js/main.ed426c68.chunk.js.map",
+    "runtime-main.js": "/namflix/static/js/runtime-main.bffb1178.js",
+    "runtime-main.js.map": "/namflix/static/js/runtime-main.bffb1178.js.map",
+    "static/js/2.7502af23.chunk.js": "/namflix/static/js/2.7502af23.chunk.js",
+    "static/js/2.7502af23.chunk.js.map": "/namflix/static/js/2.7502af23.chunk.js.map",
+    "index.html": "/namflix/index.html",
+    "static/js/2.7502af23.chunk.js.LICENSE.txt": "/namflix/static/js/2.7502af23.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bffb1178.js",
+    "static/js/2.7502af23.chunk.js",
+    "static/js/main.ed426c68.chunk.js"
+  ]
+}
