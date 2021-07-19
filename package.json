@@ -33,7 +33,7 @@
       "react-app/jest"
     ]
   },
-  "homepage": "https://totherain155.github.io/namflix",
+  "homepage": "https://condescending-poitras-ff1ca2.netlify.app/",
   "browserslist": {
     "production": [
       ">0.2%",
