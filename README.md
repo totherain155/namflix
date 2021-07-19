@@ -28,3 +28,7 @@ App.
 - [ ] Collections Link
 - [ ] Collections Route
 - [ ] on TV Show, show seasons and creators
+
+# Preview:
+
+Try to on [netlify](https://condescending-poitras-ff1ca2.netlify.app/)
